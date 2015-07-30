@@ -9,47 +9,84 @@
   html,body {
     background-color: #f3f5f7;
     font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Meiryo", "メイリオ", "MS PGothic", "Osaka", arial, helvetica, clean, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    text-align: center;
+  }
+  .border {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 2px dashed #ccc;
+    padding: 20px 0;
+  }
+  #fujiwara {
+    border-top: 2px dashed #ccc;
+  }
+  .border:nth-child(2n){
+    background-color: #e6e6e6;
+  }
+  .content {
+      width: 900px;
+      max-width: 90%;
+      margin: 30px auto;
+  }
+  .border:nth-child(2n){
+    background-color: #fff;
   }
   </style>
   <script src="javascripts/jquery-2.1.4.min.js"></script>
 </head>
 <body>
   <h1>石田さんさよなら</h1>
-  <div id="fujiwara">
-    <img style="width:30%;height:30%;" src='images/tagetage.png'>
-    <p>マニラで会いましょう。藤原</p>
+  <div id="fujiwara" class="border">
+    <div class="content">
+      <img style="width:30%;height:30%;" src='images/tagetage.png'>
+      <p>マニラで会いましょう。</p>
+      <div class="message-author"><p>藤原</p></div>
+    </div>
   </div>
-  <div id="murasato" style="width:90%; max-width:900px; margin:0 auto 20px;">
-    <h2><marquee>いままでお世話になりました！</marquee></h2>
-    <p>１年以上の間、一緒に仕事できて楽しかったです。<br>
-    次のステージでもスクラムマスター発揮して下さい！</p>
-    <p>村里</p>
-    <img src='images/img_i4da.png'>
+  <div id="murasato" class="border" style="">
+    <div class="content">
+      <h2><marquee>いままでお世話になりました！</marquee></h2>
+      <p>１年以上の間、一緒に仕事できて楽しかったです。<br>
+      次のステージでもスクラムマスター発揮して下さい！</p>
+      <div class="message-author"><p>村里</p></div>
+      <img src='images/img_i4da.png'>
+    </div>
   </div>
-  <hr>
-  <div id="uenot">
+  <div id="uenot" class="border">
+    <div class="content">
       石田さん！泣
+    </div>
   </div>
 
-  <div id="atnak">
-    <h2>ボルダリング三回っきり</h2>
-    <p>Android 開発とか色々教えて貰いたかったです！(ノД`)・゜・。<br/>
-    マニラに近いとこでも活躍してくださいね～<br/>
-    また山でビール飲みましょ＞＜</p>
-    <p>ナカガワ</p>
+  <div id="atnak" class="border">
+    <div class="content">
+      <h2>ボルダリング三回っきり</h2>
+      <p>Android 開発とか色々教えて貰いたかったです！(ノД`)・゜・。<br/>
+      マニラに近いとこでも活躍してくださいね～<br/>
+      また山でビール飲みましょ＞＜</p>
+      <div class="message-author"><p>ナカガワ</p></div>
+    </div>
   </div>
-  <div id="ken5">
-    <h2>Androiderがいなくなるのは寂しいです</h2>
-    <p>メガネかけた石田さんはもう見れないんでしょうか(´；ω；｀)ｳｯ… <br>
-    まだまだ学びたいこともあったので、フィリピン遊びいくのでシクヨロです</p>
-    <p>Kengo</p>
+  <div id="ken5" class="border">
+    <div class="content">
+      <h2>Androiderがいなくなるのは寂しいです</h2>
+      <p>メガネかけた石田さんはもう見れないんでしょうか(´；ω；｀)ｳｯ… <br>
+      まだまだ学びたいこともあったので、フィリピン遊びいくのでシクヨロです</p>
+      <div class="message-author"><p>Kengo</p></div>
+    </div>
   </div>
 
-  <div id="okuno">
-    <h2>次、いつ飲みます？<h2>
-    誰よりも冷静な男、私も負けないぐらい冷静にありたいです。また、一緒に開発しましょう！
-    <p>奥野</p>
-    <a href='https://github.com/ishidasan/ishidasan.github.io/blob/master/okuno.markdown'>おまけ</a>
+  <div id="okuno" class="border">
+    <div class="content">
+      <h2>次、いつ飲みます？<h2>
+      誰よりも冷静な男、私も負けないぐらい冷静にありたいです。また、一緒に開発しましょう！
+      <div class="message-author"><p>奥野</p></div>
+      <a href='https://github.com/ishidasan/ishidasan.github.io/blob/master/okuno.markdown'>おまけ</a>
+    </div>
   </div>
 
 <script>
@@ -67,114 +104,139 @@
   setTimeout(function(){clearInterval(timer);},1000*120);
 </script>
 
-  <div id="suzukis" class="message">
-    <h2>お世話になりました</h2>
-    <p>マニラに行くんですって?なんてうらやましい</p>
-    <p>マニラのカジノは比較的安く遊べるので、ぜひ遊びに行ってください</p>
-    <p>フィリピンはポーカーが盛んな国で、街中にポーカーハウスがあったりもします</p>
-    <p>金に困ったらポーカーをやりましょう</p>
-    <p>そのうち遊びに行くのでその時はぜひ</p>
-    <div class="message-author"><p>鈴木信</p></div>
+  <div id="suzukis" class="message border">
+    <div class="content">
+      <h2>お世話になりました</h2>
+      <p>マニラに行くんですって?なんてうらやましい</p>
+      <p>マニラのカジノは比較的安く遊べるので、ぜひ遊びに行ってください</p>
+      <p>フィリピンはポーカーが盛んな国で、街中にポーカーハウスがあったりもします</p>
+      <p>金に困ったらポーカーをやりましょう</p>
+      <p>そのうち遊びに行くのでその時はぜひ</p>
+      <div class="message-author"><p>鈴木信</p></div>
+    </div>
   </div>
 
-  <div id="nkuroda">
-    <h2>また会う日まで</h2>
-    <p>フィリピン行かれるんですね。</p>
-    <p>クールな石田さんに会えなくなるのは寂しいですが、</p>
-    <p>やりたい事を追求するのが良い人生だと思います。</p>
-    <p>また、どこかでお会いましょう！</p>
-    <div class="message-author"><p>黒田直樹</p></div>
+  <div id="nkuroda" class="border">
+    <div class="content">
+      <h2>また会う日まで</h2>
+      <p>フィリピン行かれるんですね。</p>
+      <p>クールな石田さんに会えなくなるのは寂しいですが、</p>
+      <p>やりたい事を追求するのが良い人生だと思います。</p>
+      <p>また、どこかでお会いましょう！</p>
+      <div class="message-author"><p>黒田直樹</p></div>
+    </div>
   </div>
 
-  <div id="ppworks" class="message">
-    <h2>海外のことはまかせたー！</h2>
-    <p>あとはおれたちにまかせろー！</p>
-    <p>インターネットがあれば、どこにいてもすぐそこです。今後ともよろしくです！</p>
-    <div class="message-author"><p>越川直人</p></div>
+  <div id="ppworks" class="message border">
+    <div class="content">
+      <h2>海外のことはまかせたー！</h2>
+      <p>あとはおれたちにまかせろー！</p>
+      <p>インターネットがあれば、どこにいてもすぐそこです。今後ともよろしくです！</p>
+      <div class="message-author"><p>越川直人</p></div>
+    </div>
   </div>
 
-  <div id="oga" class="message">
-    <h2>ありがとうございました！</h2>
-    <p>海外行かれるそうで！</p>
-    <p>会った時から石田さんには世界を股にかけそうな雰囲気しか感じませんでした</p>
-    <p>別れ際に「僕らはインターネットで繋がってます」とキザなお言葉を頂いたので，今後もよろしくお願いします！</p>
-    <div class="message-author"><p>小笠原</p></div>
+  <div id="oga" class="message border">
+    <div class="content">
+      <h2>ありがとうございました！</h2>
+      <p>海外行かれるそうで！</p>
+      <p>会った時から石田さんには世界を股にかけそうな雰囲気しか感じませんでした</p>
+      <p>別れ際に「僕らはインターネットで繋がってます」とキザなお言葉を頂いたので，今後もよろしくお願いします！</p>
+      <div class="message-author"><p>小笠原</p></div>
+    </div>
   </div>
 
-  <div id="shoji" class="message">
-    <h2><font size="4"><font color="#00c080">石</font><font color="#00c7b8">田</font><font color="#00a7ce">さ</font><font color="#0076d5">ん</font><font color="#0041dc">、</font><font color="#0008e3">あ</font><font color="#3300ea">り</font><font color="#7300f1">が</font><font color="#b700f8">と</font><font color="#ff00ff">う</font></font></h2>
-    <p>一度でいいから石田さんがあたふたする姿を観たかったのですが、残念ながら叶いませんでした。</p>
-    <p>むこうで可愛いフィリピーナに言い寄られてあたふたできるといいですね。</p>
-    <p>頑なに僕のことShowZと呼び続けてくれましたが定着しなかったのが悔やまれます。</p>
-    <p>最後に、僕が入社してからこれまで、近くで色々助けてくれて本当にありがとうございました。一緒に働けて楽しかったです。</p>
-    <div class="message-author"><p>ShowZ</p></div>
+  <div id="shoji" class="message border">
+    <div class="content">
+      <h2><font size="4"><font color="#00c080">石</font><font color="#00c7b8">田</font><font color="#00a7ce">さ</font><font color="#0076d5">ん</font><font color="#0041dc">、</font><font color="#0008e3">あ</font><font color="#3300ea">り</font><font color="#7300f1">が</font><font color="#b700f8">と</font><font color="#ff00ff">う</font></font></h2>
+      <p>一度でいいから石田さんがあたふたする姿を観たかったのですが、残念ながら叶いませんでした。</p>
+      <p>むこうで可愛いフィリピーナに言い寄られてあたふたできるといいですね。</p>
+      <p>頑なに僕のことShowZと呼び続けてくれましたが定着しなかったのが悔やまれます。</p>
+      <p>最後に、僕が入社してからこれまで、近くで色々助けてくれて本当にありがとうございました。一緒に働けて楽しかったです。</p>
+      <div class="message-author"><p>ShowZ</p></div>
+    </div>
   </div>
 
-  <div id="ucciicci">
-    <h2>フィリピンの銀行制覇します</h2>
-    <p>だから早くフィリピンの銀行口座全部あけてくれー！</p>
-    <p>間違いなくマニラ行くんで安全で美味しいところ開拓お願いします</p>
-    <p>ちなみにgithubのアカウント持ってなかったんですが今日このために作りました</p>
-    <div class="message-author"><p>内波生一</p></div>
+  <div id="ucciicci" class="border">
+    <div class="content">
+      <h2>フィリピンの銀行制覇します</h2>
+      <p>だから早くフィリピンの銀行口座全部あけてくれー！</p>
+      <p>間違いなくマニラ行くんで安全で美味しいところ開拓お願いします</p>
+      <p>ちなみにgithubのアカウント持ってなかったんですが今日このために作りました</p>
+      <div class="message-author"><p>内波生一</p></div>
+    </div>
   </div>
 
-  <div id="tsuzuki" class="message">
-    <h2>MFフィリピン支部！！</h2>
-    <p>海外羨ましいです。</p>
-    <p>海外生活、最初は大変かもしれませんが、頑張ってください！</p>
-    <p>長い間本当にお世話になりました。</p>
-    <p>新天地でのご活躍を祈念しています！！！</p>
-    <div class="message-author"><p>都築</p></div>
+  <div id="tsuzuki" class="message border">
+    <div class="content">
+      <h2>MFフィリピン支部！！</h2>
+      <p>海外羨ましいです。</p>
+      <p>海外生活、最初は大変かもしれませんが、頑張ってください！</p>
+      <p>長い間本当にお世話になりました。</p>
+      <p>新天地でのご活躍を祈念しています！！！</p>
+      <div class="message-author"><p>都築</p></div>
+    </div>
   </div>
 
-  <div id="sugimoto">
-    <h2>活躍楽しみにしています!</h2>
-    <p>半年程ですが一緒に働けて楽しかったです!</p>
-    <p>いきなり来月には海外勤務という聞いてかなりびっくりしました。</p>
-    <p>日本にまで石田さんの名前を轟かしてくれるのを楽しみにしています(｀･ω･´)ゞ </p>
-    <div class="message-author"><p>杉本</p></div>
+  <div id="sugimoto" class="border">
+    <div class="content">
+      <h2>活躍楽しみにしています!</h2>
+      <p>半年程ですが一緒に働けて楽しかったです!</p>
+      <p>いきなり来月には海外勤務という聞いてかなりびっくりしました。</p>
+      <p>日本にまで石田さんの名前を轟かしてくれるのを楽しみにしています(｀･ω･´)ゞ </p>
+      <div class="message-author"><p>杉本</p></div>
+    </div>
   </div>
 
-  <div id="hosoya">
-    <h2>「クラスコメントおなしゃす」の指摘がなくなるのが寂しいです(´・ω・｀)</h2>
-    <p>またあのコメントが聞ける日を夢見てます(｀・ω・´)</p>
-    <div class="message-author"><p>ほそや</p></div>
+  <div id="hosoya" class="border">
+    <div class="content">
+      <h2>「クラスコメントおなしゃす」の指摘がなくなるのが寂しいです(´・ω・｀)</h2>
+      <p>またあのコメントが聞ける日を夢見てます(｀・ω・´)</p>
+      <div class="message-author"><p>ほそや</p></div>
+    </div>
   </div>
-  <div id="hachinobu">
-    <h2>必ずまた会いましょう</h2>
-    <p>初めてサシ飲みして深夜3時頃まで悩み聞いてくれたこと</p>
-    <p>そして帰り道は同じ方向のはずなのに石田さんが別のタクシーで消えたことは忘れられない思い出です。</p>
-    <p>フィリピンでのご活躍を心より祈っています。</p>
-    <p>もしフィリピンで会えたならフィリピンのクソまずいビールで乾杯しましょう</p>
-    <p>綺麗な人多いですがニューハーフも多いイメージなので自分の身は自分で守ってくださいね！</p>
-    <p>お世話になりました。石田さんが居てくれて本当に良かったです。</p>
-    <div class="message-author"><p>西信貴博</p></div>
+  <div id="hachinobu" class="border">
+    <div class="content">
+      <h2>必ずまた会いましょう</h2>
+      <p>初めてサシ飲みして深夜3時頃まで悩み聞いてくれたこと</p>
+      <p>そして帰り道は同じ方向のはずなのに石田さんが別のタクシーで消えたことは忘れられない思い出です。</p>
+      <p>フィリピンでのご活躍を心より祈っています。</p>
+      <p>もしフィリピンで会えたならフィリピンのクソまずいビールで乾杯しましょう</p>
+      <p>綺麗な人多いですがニューハーフも多いイメージなので自分の身は自分で守ってくださいね！</p>
+      <p>お世話になりました。石田さんが居てくれて本当に良かったです。</p>
+      <div class="message-author"><p>西信貴博</p></div>
+    </div>
   </div>
-  <br>
-  <div id="mori">
+  <div id="mori" class="border">
+    <div class="content">
     <p>石田さん</p>
-    <p>一緒に働けた期間はとても勉強になりました。</p>
-    <p>そのバイタリティあふれる行動力でアジアを制覇してください。</p>
-    <p>陰で「純一」って呼んでました。懺悔します。</p>
-    <p>純一、また会いましょう！</p>
-    <div class="message-author"><p> 森</p></div>
+      <p>一緒に働けた期間はとても勉強になりました。</p>
+      <p>そのバイタリティあふれる行動力でアジアを制覇してください。</p>
+      <p>陰で「純一」って呼んでました。懺悔します。</p>
+      <p>純一、また会いましょう！</p>
+      <div class="message-author"><p> 森</p></div>
+    </div>
   </div>
 
-  <div id="asano" class="message">
-    <h2>先輩！お世話になりました！</h2>
-    <p>村岡研究室時代から数えるとかなり長い付き合いになりますね！</p>
-    <p>僕は石田さんから教わった多くの事を胸に刻んで、今後も更に頑張ります。</p>
-    <p>石田さんは海外で更に活躍されるはずなので、その名が世界に知れ渡るのも近いですね！</p>
-    <p>今後とも引き続きプライベートではよろしくお願いします！！</p>
-    <div class="message-author"><p>浅野</p></div>
+  <div id="asano" class="message border">
+    <div class="content">
+      <h2>先輩！お世話になりました！</h2>
+      <p>村岡研究室時代から数えるとかなり長い付き合いになりますね！</p>
+      <p>僕は石田さんから教わった多くの事を胸に刻んで、今後も更に頑張ります。</p>
+      <p>石田さんは海外で更に活躍されるはずなので、その名が世界に知れ渡るのも近いですね！</p>
+      <p>今後とも引き続きプライベートではよろしくお願いします！！</p>
+      <div class="message-author"><p>浅野</p></div>
+    </div>
   </div>
-  <div id="nakade" class="message">
-    <h2>マニラって安全なの？</h2>
-    <p>石田分析官の名を欲しいままにしている石田さん</p>
-    <p>マニラに行っても冷静に分析して危険な場所には近づかないようにしてください。</p>
-    <p>もう少し一緒に仕事したかったですが、残念です。</p>
-    <p>お体に気をつけて頑張って生きてください。いつか日本でまた会いましょう。</p>
-    <div class="message-author"><p>中出</p></div>
+  <div id="nakade" class="message border">
+    <div class="content">
+      <h2>マニラって安全なの？</h2>
+      <p>石田分析官の名を欲しいままにしている石田さん</p>
+      <p>マニラに行っても冷静に分析して危険な場所には近づかないようにしてください。</p>
+      <p>もう少し一緒に仕事したかったですが、残念です。</p>
+      <p>お体に気をつけて頑張って生きてください。いつか日本でまた会いましょう。</p>
+      <div class="message-author"><p>中出</p></div>
+    </div>
   </div>
 </body>
 </html>
