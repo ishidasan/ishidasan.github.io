@@ -25,11 +25,32 @@
 		<p>村里</p>
 		<img src='images/img_i4da.png'>
 	</div>
-
 	<div id="ken5">
 		<h2>Androiderがいなくなるのは寂しいです</h2>
 		<p>メガネかけた石田さんはもう見れないんでしょうか(´；ω；｀)ｳｯ… <br>
 		まだまだ学びたいこともあったので、フィリピン遊びいくのでシクヨロです</p>
 		<p>Kengo</p>
+	</div>
+	<div id="okuno">
+		<h2>次、いつ飲みます？<h2>
+		誰よりも冷静な男、私も負けないぐらい冷静にありたいです。また、一緒に開発しましょう！
+		<p>奥野</p>
+    <a href='https://github.com/ishidasan/ishidasan.github.io/blob/master/okuno.markdown'>おまけ</a>
+	</div>
+
+<script>
+	var str = "%E7%9F%B3%E7%94%B0%E3%81%95%E3%82%93%E3%81%8A%E7%96%B2%E3%82%8C%E6%A7%98%E3%81%A7%E3%81%97%E3%81%9F%EF%BC%81";
+	str=decodeURI(str);
+	str+=str+str;
+	var len = str.length;
+	var c = 0;
+	var itv = 100;
+	var timer = setInterval(function(){
+		console.log(str);
+		str = str.substr(1)+str.slice(0,1);
+		if(++c==len)c = 0;
+	},itv);
+	setTimeout(function(){clearInterval(timer);},1000*120);
+</script>
 </body>
 </html>
